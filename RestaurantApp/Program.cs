@@ -20,6 +20,26 @@ namespace RestaurantApp
             new Restaurant(5, "Haidilao Hot Pot", "hot pot", 4.7)
 
             };
+            Console.WriteLine("=== Add New Restaurant ===");
+
+            Console.Write("Enter Restaurant Name: ");
+            string name = Console.ReadLine();
+
+            Console.Write("Enter Restaurant Type: ");
+            string type = Console.ReadLine();
+
+            Console.Write("Enter Restaurant Rating: ");
+            double rating = Convert.ToDouble(Console.ReadLine());
+
+            // Generate new ID
+            int id = restaurants.Count + 1;
+
+            // Add restaurant to List
+            restaurants.Add(new Restaurant(id, name, type, rating));
+
+            Console.WriteLine("Restaurant added successfully!");
+            Console.WriteLine();
+
             foreach (var item in restaurants)
             {
                 Console.WriteLine(
